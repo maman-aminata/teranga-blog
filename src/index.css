@@ -32,3 +32,295 @@ body {
 .etat-erreur { color: var(--erreur); border: 1px solid var(--erreur); border-radius: 6px; padding: .75rem; }
 .message-erreur { color: var(--erreur); font-size: .9rem; margin: -.5rem 0 .75rem; }
 .discret { color: var(--discret); font-size: .9rem; }
+/* ==============================
+   TERANGA BLOG - STYLE GLOBAL
+============================== */
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #263447;
+  background: #f5f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f8fc;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==============================
+   MISE EN PAGE PRINCIPALE
+============================== */
+
+.layout-principal {
+  min-height: 100vh;
+}
+
+.contenu-principal {
+  width: 90%;
+  max-width: 1150px;
+  margin: 40px auto;
+}
+
+/* ==============================
+   BARRE DE NAVIGATION
+============================== */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 18px 6%;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(35, 65, 100, 0.07);
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar nav a {
+  color: #65758b;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #2878bd;
+}
+
+.navbar p {
+  color: #2878bd;
+  font-weight: 600;
+  background: #edf6ff;
+  padding: 10px 16px;
+  border-radius: 20px;
+}
+
+/* ==============================
+   TITRES ET TEXTES
+============================== */
+
+h1 {
+  color: #203c59;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #315b80;
+  margin: 25px 0 15px;
+}
+
+h3,
+h4 {
+  color: #315b80;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* ==============================
+   LISTE ET CARTES D'ARTICLES
+============================== */
+
+.articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.articles-list > * {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e8eef5;
+  box-shadow: 0 4px 15px rgba(35, 65, 100, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.articles-list > *:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(35, 65, 100, 0.09);
+}
+
+/* ==============================
+   PAGES
+============================== */
+
+.page-articles,
+.page-article,
+.page-protegee,
+.mon-espace {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #e8eef5;
+}
+
+.page-article > p {
+  color: #64748b;
+  margin: 15px 0;
+}
+
+.page-introuvable {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+/* ==============================
+   FORMULAIRES ET CHAMPS
+============================== */
+
+input,
+textarea {
+  width: 100%;
+  padding: 13px 15px;
+  margin: 10px 0;
+  border: 1px solid #dce5ef;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #263447;
+  transition: border 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4b9bd4;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ==============================
+   BOUTONS
+============================== */
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 20px;
+  background: #287dbb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d6399;
+}
+
+/* ==============================
+   COMMENTAIRES
+============================== */
+
+.liste-commentaires {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.commentaire {
+  padding: 18px;
+  background: #f5f9fd;
+  border-radius: 10px;
+  border-left: 3px solid #65a9d9;
+}
+
+.commentaire h4 {
+  margin-bottom: 8px;
+}
+
+.commentaire p {
+  color: #64748b;
+}
+
+/* ==============================
+   LIENS
+============================== */
+
+.page-protegee a,
+.page-introuvable a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #287dbb;
+  font-weight: 600;
+}
+
+.page-protegee a:hover,
+.page-introuvable a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVE - TELEPHONE
+============================== */
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .navbar nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contenu-principal {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .page-articles,
+  .page-article,
+  .page-protegee,
+  .mon-espace {
+    padding: 20px;
+  }
+
+  .articles-list {
+    grid-template-columns: 1fr;
+  }
+}
